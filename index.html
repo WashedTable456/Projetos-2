@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Site Game Over</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+
+        <!-- inicio do codigo de login -->
+    <div class="container2">
+      <div class="form-container">
+          <div class="form-login">
+              <h2>Login</h2>
+              <form id="loginForm">
+                  <input type="email" id="loginEmail" placeholder="Email" required>
+                  <input type="password" id="loginPassword" placeholder="Senha" required>
+                  <button type="submit">Entrar</button>
+              </form>
+              <p>Não tem uma conta? <a href="#" id="showRegister">Cadastre-se</a></p>
+          </div>
+
+          <div class="form-register" style="display: none;">
+              <h2>Cadastro</h2>
+              <form id="registerForm">
+                  <input type="text" id="registerName" placeholder="Nome" required>
+                  <input type="email" id="registerEmail" placeholder="Email" required>
+                  <input type="password" id="registerPassword" placeholder="Senha" required>
+                  <button type="button" id="sendCode">Cadastrar</button>
+                  <!--<input type="text" id="verificationCode" placeholder="Código de Verificação" required style="display: none;">
+                  <button type="submit" id="registerButton" style="display: none;">Cadastrar</button> -->
+              </form>
+              <p>Já tem uma conta? <a href="#" id="showLogin">Faça login</a></p>
+          </div>
+      </div>
+  </div>
+
+  <script>
+      // Código JavaScript 
+      const showRegisterLink = document.getElementById('showRegister');
+      const showLoginLink = document.getElementById('showLogin');
+      const loginForm = document.getElementById('loginForm');
+      const registerForm = document.getElementById('registerForm');
+      const formLogin = document.querySelector('.form-login');
+      const formRegister = document.querySelector('.form-register');
+      const sendCodeButton = document.getElementById('sendCode');
+      const verificationCodeInput = document.getElementById('verificationCode');
+      const registerButton = document.getElementById('registerButton');
+
+      showRegisterLink.addEventListener('click', (e) => {
+          e.preventDefault();
+          formLogin.style.display = 'none';
+          formRegister.style.display = 'block';
+      });
+
+      showLoginLink.addEventListener('click', (e) => {
+          e.preventDefault();
+          formRegister.style.display = 'none';
+          formLogin.style.display = 'block';
+      });
+
+    /* sendCodeButton.addEventListener('click', () => {
+          alert('Código de verificação enviado para o seu e-mail.');
+          verificationCodeInput.style.display = 'block';
+          registerButton.style.display = 'block';
+      });  */
+
+      registerForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const name = document.getElementById('registerName').value;
+          const email = document.getElementById('registerEmail').value;
+          const password = document.getElementById('registerPassword').value;
+          const code = document.getElementById('verificationCode').value;
+
+          if (code === '123456') {
+              alert('Cadastro realizado com sucesso!');
+          } else {
+              alert('Código de verificação inválido.');
+          }
+      }); 
+
+      loginForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const email = document.getElementById('loginEmail').value;
+          const password = document.getElementById('loginPassword').value;
+          alert(`Login realizado com o e-mail: ${email}`);
+      });
+  </script>
+
+<!-- fim do codigo de login -->
+    </head>
+    <body id="body">
+      <div class="container">
+        <input type="checkbox" id="botão" name="botão" >
+        <label for="botão" >
+
+        </label>
+      </div>
+        <section id="banner">
+          <img src="game2.jpg">
+        </section>
+        <h1>10 Games mais jogados nos últimos anos</h1>
+        <section class="topo" id="topo">
+         
+        <h3>De Fortnite ao mais recente lançamento Elden Ring, confira a lista dos jogos mais populares</h3>
+        <p>Sabia que o mercado dos games é mais lucrativo do que as indústrias do cinema e da música juntas.
+            Jogar games já é uma forma de entretenimento com bastante espaço no mundo. De acordo com pesquisa da DFC Intelligence, em 2020, aproximadamente 40% da população mundial jogava jogos eletrônicos.
+            Trazendo para contexto nacional, quase ¾ dos brasileiros têm o hábito de jogar games, segundo a Pesquisa Game Brasil de 2022. </p>
+        <p>Já que esse hábito é tão popular, quais são os games mais jogados do planeta? É isso que você vai descobrir agora!</p>    
+      </section>
+           <h2>Fortnite</h2>
+           <h4>Pico de players online: 12,3 milhões em 2020</h4>
+              <p>Lançado em 2017, Fortnite é um game battle royale, ou seja, o objetivo é você ser o único player ou squad sobrevivente do mapa – para os fãs de filmes, é estilo é tipo a saga Jogos Vorazes. É possível jogar solo, em dupla ou em quarteto, além de também a ver um modo sobrevivência contra zumbis.</p> 
+              <p>Mas não é só como battle royale que o game faz sucesso. Em 2020, Fortnite foi palco de uma novidade: Travis Scott, rapper americano, lançou seu single <strong>THE SCOTTS</strong> no game. Alô, metaverso! O evento atraiu nada mais, nada menos que 12,3 milhões de pessoas, de acordo com a desenvolvedora Epic Games.</p>
+              <p>E não foi só essa vez que Fortnite foi palco de show e de sucesso. Em 2019, o dj Marshmello fez uma apresentação para 10,7 milhões de gamers.</p>
+              <p>Não encontramos dados confiáveis de quantos gamers jogam Fortnite simultaneamente fora de um evento especial. Com esse número, pode não ser o primeiro da lista. Mas provavelmente está entre os 10.</p>
+              <img src="fortnite.jpg">   
+           <h2>League of Legends</h2> 
+           <h4>Players online: 8 milhões</h4>
+              <p>Popularmente conhecido como LoL, League of Legends é um game da primeira década dos anos 2000 (2009) e que popularizou o estilo <a href="https://gogamers.gg/gamepedia/o-que-sao-jogos-moba/" >MOBA.</a>  No jogo, duas equipes de cinco pessoa duelam entre si para ver quem destrói uma estrutura da base inimiga primeiro.</p>
+              <p>Em 2019, a desenvolvedora Riot Games afirmou que LoL é jogado por 8 milhões de pessoas quase todos os dias. O cálculo feito com a média diária de usuários simultâneos em todas as regiões (ocidente, China, sudeste da Ásia e Taiwan).</p>
+              <img src="lol.jpg">
+              
+           <h2>CrossFire</h2>
+           <h4>Players online: 8 milhões</h4>
+              <p>Caso você nunca tenha ouvido falar do jogo, não se surpreenda. O jogo tem enorme popularidade por conta do sucesso no oriente. Mas, claro, também é relativamente conhecido no ocidente.</p>
+              <p>Assim como os games anteriores, a desenvolvedora Smilegate afirmou que o game conta com 8 milhões de jogadores simultâneos.</p>
+              <p>CrossFire é um jogo lançado em 2007 e semelhante ao Counter-Strike; ou seja, FPS com diversos modos de jogo.</p>
+              <img src="crossfire.webp">
+            <h2>Roblox</h2>  
+            <h4>Pico de players online: 4 milhões em 2020</h4>
+              <p>Originalmente de 2006 e com nome de DynaBlocks, Roblox é um título onde os jogadores podem criar… outros games. Lançado com princípio educacional, o jogo cresceu tanto que os desenvolvedores abandonaram essa ideia e abriram para qualquer criação de game.</p>
+              <p>A franquia promove anualmente o Bloxy Awards, premiação in-game em que os players podem votar em categorias, conferir itens limitados e, principalmente, passear por um ambiente exclusivo do evento. Em 2020, 7ª edição, 4 milhões de pessoas entraram simultaneamente no jogo. </p>
+              <p>De dados fora de evento, sabemos que em 2016, o CEO David Baszuski divulgou que tinham 700 mil players simultaneamente. Assim como no Fortnite, o número de jogadores por dia pode não representar esse quarto lugar, mas entre os 10 games mais jogados é bem possível que esteja. </p>
+              <img src="roblox.jpg">
+            <h2>PUBG</h2>
+            <h4>Pico de players online: 3,23 milhões em 2017</h4>  
+              <p>Pioneiro dos jogos battle royale, Playerunknown’s Battlegrounds nasceu em 2016. Assim como Fortnite, o objetivo do jogo é ser o último personagem ou time sobrevivente do mapa.</p>
+              <p>Como dissemos, battle royale é como o filme Jogos Vorazes. Até o PUBG, não havia um título desse gênero. Como a saga de Katniss Everdeen terminou em 2015, o lançamento de um jogo nesse formato um ano depois teve um enorme impacto inicial. </p>
+              <p>Em 2017, o game registrou incríveis 3,2 milhões de jogadores simultâneos, conforme números da Steam. Mas, ao longo do tempo, com o lançamento de tantos outros jogos battle royale e falta de inovação, PUBG hoje registra 500 mil players ao mesmo tempo, em média.</p>
+              <img src="PUBG.jpg">
+            <h2>Minecraft</h2>
+            <h4>Pico de players online: 1,4 milhão em 2015</h4>
+              <p>Um dos games mais jogados e mais conhecidos do mundo, Minecraft é um sandbox de sobrevivência. Com visual em blocos e pixelado, os players podem se divertir de diversas maneiras nele, desde recolhendo matéria-prima para sobreviver no mundo até “apenas” criando o cenário com recursos ilimitados.</p>  
+              <p>Aqui, temos outro jogo com dados desatualizados, mas que muito provavelmente está entre os 10 games mais jogados dos últimos anos. Em janeiro de 2015, Nathan Adams, desenvolvedor da Mojang, informou que o game atingiu 1,4 milhão de pessoas jogando em dado momento. </p> 
+              <p>A título de curiosidade, em 2019, Minecraft teve aproximadamente 120 milhões de usuários ativos por mês. Ou seja, é possível que o número hoje seja bem maior que 1,4 milhão.</p> 
+              <img src="minecraft.jpg">  
+            <h2>Lost Ark</h2>
+            <h4>Pico de players online: 1,32 milhão em 2015</h4>
+              <p>Co-desenvolvido pela Tripod Studio e Smilegate RPG, Lost Ark foi lançado em 2019 para o oriente e em 2022 no ocidente. O game é um MMORPG com visão isométrica e focado principalmente nos duelos entre players e ambiente.</p>
+              <p>Como este jogo é bem recente, os números ainda são uma incógnita. No lançamento ocidental, o jogo teve pico de 1,3 milhão de jogadores simultâneos, de acordo com a Steam. Pós hype de estreia, game manteve bom número, com 800 mil, em média.</p>
+              <p>Porém, em junho, a publicadora ocidental Amazon Games baniu diversos usuários, por atrapalharem a experiência dos demais. Depois desse fato, a média de jogadores simultâneos é de 200 mil. 
+                Capa do jogo Lost Ark com vários personagens disparando poderes mágicos, representando um dos games mais jogados recentemente.</p>
+              <img src="lost-ark.jpg">
+            <h2>Counter-Strike: Global Offensive</h2>
+            <h4>Pico de players online: 1,30 milhão em 2020</h4>
+              <p>A famosa franquia da Valve não poderia ficar de fora dessa lista. De 2021, Counter-Strike: Global Offensive é um <a href="https://gogamers.gg/gamepedia/o-que-sao-jogos-fps/">jogo de FPS</a> em que dois times duelam, os terroristas contra os policiais.</p> 
+              <p>Em abril de 2020, fase inicial da pandemia do covid-19 em países ocidentais como Estados Unidos e Brasil, CS:Go registrou pico de 1,3 milhão de players simultâneos. Atualmente, o número de jogadores fica entre 800 mil a 1 milhão, segundo dados da Steam, sendo um dos games mais jogados entre os games já há muito tempo.</p> 
+              <img src="counter-strike.jpg">
+            <h2>Dota 2</h2>
+            <h4>Pico de players online: 1,29 milhão em 2016</h4>
+              <p>Você sabia que o nome desse popular jogo de 2013 é Defense of the Ancients 2? Um dos MOBAs mais famosos do mundo, Dota 2 também é desenvolvido pela Valve e tem uma dinâmica semelhante a League of Legends: partidas 5v5 em que cada equipe deve destruir o Ancestral do outro time, que está na respectiva base. </p> 
+              <p>Se tratando de gamers simultâneos, o auge do jogo foi em 2016, com 1,2 milhão de jogadores, conforme dados da Steam. Atualmente, o MOBA mantém uma média de 700 mil.</p>
+              <img src="dota-2.jpg"> 
+            <h2>Elden Ring</h2>
+            <h4>Pico de players online: 952 mil em 2022</h4>
+              <p>Assim como Lost Ark, Elden Ring é outro jogo que foi lançado em 2022. Mas a diferença é que saiu para o mundo inteiro de uma vez. Game de mundo aberto e no estilo soulslike – gênero tendência nos últimos anos -, você é livre para explorar o mapa e realizar missões dos personagens não-jogáveis.</p>
+              <p>Na primeira semana de lançamento, o jogo da Bandai Namco atingiu 952 mil pessoas jogando simultaneamente na Steam, segundo dados da própria. Como o game também saiu para consoles, é possível afirmar que o número de players foi maior que esse.</p>
+              <img src="Elden-Ring-.jpg">
+
+              <aside class="sidebar" role="complementary">
+                <div class="wrapper">
+            
+                  <div class="saiba-mais" id="saiba-mais">
+                    <h3>Você também pode gostar de saber:</h3>
+                    <nav role="navigation">
+                      <ul>
+                      <li> <a href="https://jovemnerd.com.br/noticias/games/jogos-mais-aguardados-de-2024-expectativas" class="saiba-mais">Principais Lançamentos de 2024</a> </li>	 
+                      <li> <a href="https://www.xbox.com/pt-BR/promotions/sales/sales-and-specials" class="saiba-mais">Jogos da xbox em oferta</a> </li>	
+                      <li> <a href="https://www.zoom.com.br/console-de-video-game/deumzoom/ps5-vs-xbox-series-x-comparativo-de-consoles-controles-e-exclusivos" class="saiba-mais">Comparativo:Xbox series X ou PS5</a> </li>	
+                      <li> <a href="https://www.gamevicio.com/noticias/2023/07/os-11-melhores-exclusivos-do-playstation-5-ate-agora/" class="saiba-mais">Os 11 melhores jogos exclusivos PS5</a> </li>	
+                      <li> <a href="https://www.tudocelular.com/mercado/noticias/n221103/xbox-game-pass-novo-aumento-preco-mais-um-nivel.html#google_vignette" class="saiba-mais">Novos preços do game pass</a> </li>	
+                      <li> <a href="https://www.theenemy.com.br/playstation/ea-sports-fc-25-trailer-novidades" class="saiba-mais">Novo FC 25 está chegando,confira...</a> </li>	
+                		
+                      					</ul>
+                    </nav>
+                  </div>
+                </aside>
+     <main>
+      <article>
+        <h3>Xbox One S vs Xbox One X: qual console comprar em 2023?
+
+        </h3>
+        <p>Descubra qual dos consoles da Microsoft, o Xbox One X ou o Xbox One S, é mais vantajoso para você. Compare as diferenças entre eles e faça a melhor escolha para sua experiência de jogo.</p>
+        <p>Para a maioria dos gamers, uma simples decisão pode virar um verdadeiro dilema. Em uma época onde existem tantas opções e as empresas buscando encantar seus clientes, a Microsoft continua sendo uma das bem avaliadas com sua famosa linha de Xbox.</p>
+        <p>Com cada console trazendo suas próprias características distintas e aprimoramentos tecnológicos, os jogadores se encontram diante de uma imensidão de escolhas, onde a experiência de jogo, o desempenho visual e a diversidade de recursos desempenham papéis cruciais.</p>
+        <p>Nesta análise comparativa, mergulhamos nas qualidades notáveis de ambos os consoles, desvendando uma trama repleta de vantagens e desvantagens que prometem elevar a jornada de jogo a patamares emocionantes.</p>
+        <p>Seja você um entusiasta ávido ou um novato ansioso por explorar o cenário dos games, a decisão entre o Xbox One S e o Xbox One X moldará uma narrativa única em sua jornada pelos mundos virtuais em constante expansão.</p>
+      </article>
+      <article>
+        <h4>Especificações técnicas</h4>
+        <p>Compreender as especificações técnicas é uma maneira de alinhar suas expectativas com a realidade, evitando decepções e garantindo que o console escolhido atenda às suas necessidades e preferências individuais. </p>
+        <p>Dessa forma, ao considerar as especificações técnicas, você poderá tomar uma decisão mais informada, selecionando o console que oferecerá a experiência de jogo mais satisfatória e alinhada com seus gostos e objetivos. </p>
+        <h4>Xbox One S</h4>
+        <p>O Xbox One S é uma versão revisada do console Xbox One original, com melhorias e algumas novidades. Suas especificações técnicas incluem:</p>
+      <ul>
+        <li>Processador: CPU octa-core customizada da AMD com arquitetura Jaguar, rodando a 1,75 GHz.</li>
+        <li>GPU: Unidade de processamento gráfico (GPU) da AMD com arquitetura GCN, capaz de atingir 1,4 teraflops de desempenho.</li>
+        <li>Memória RAM: 8 GB de memória DDR3.</li>
+        <li>Armazenamento: Disponível em modelos com disco rígido de 500 GB, 1 TB ou 2 TB.</li>
+        <li>Unidade de Blu-ray: Suporte a discos Blu-ray para reprodução de filmes e jogos.</li>
+        <li>Resolução: Suporta jogos em até 1080p (Full HD) e reprodução de conteúdo 4K (Ultra HD) para mídias como filmes e streaming.</li>
+        <li>HDR: Suporte a High Dynamic Range (HDR) para uma gama mais ampla de cores e contrastes.</li>
+        <li>Áudio: Suporte a som Dolby Atmos e DTS:X para uma experiência de áudio mais imersiva.</li>
+        <li>Compatibilidade: Compatível com jogos do Xbox One, alguns jogos do Xbox 360 e retrocompatibilidade com títulos do Xbox original.</li>
+        <li>Conectividade: Portas USB, HDMI in/out, Ethernet, Wi-Fi integrado e Bluetooth para conexões e acessórios.</li>
+      </ul>
+      <p>O Xbox One S oferece uma experiência de jogo em alta definição, suporte a conteúdo em 4K e recursos de entretenimento, sendo uma opção mais acessível em relação ao Xbox One X, que oferece desempenho de jogo aprimorado.</p>
+     <h3>Xbox One X</h3>
+     <p>O Xbox One X é um console de videogame de alta potência, projetado para oferecer uma experiência de jogo excepcional em resolução 4K e com recursos avançados. Suas especificações técnicas incluem:</p>
+     <ul>
+      <li>Processador: CPU octa-core customizada da AMD com arquitetura Jaguar, rodando a 2,3 GHz.</li>
+      <li>GPU: Unidade de processamento gráfico (GPU) da AMD com arquitetura Polaris, capaz de atingir 6 teraflops de desempenho.</li>
+      <li>Memória RAM: 12 GB de memória GDDR5.</li>
+      <li>Armazenamento: Disco rígido (HDD) com capacidade de 1 TB.</li>
+      <li>Resolução: Suporta jogos em resolução nativa 4K (Ultra HD), proporcionando visuais mais nítidos e detalhados.</li>
+      <li>HDR: Suporte a High Dynamic Range (HDR), que melhora o contraste e a gama de cores dos jogos, resultando em visuais mais realistas e vibrantes.</li>
+      <li>Compatibilidade: Retrocompatibilidade com uma ampla gama de jogos do Xbox One, incluindo melhorias visuais em títulos selecionados.</li>
+      <li>Áudio: Suporte a som Dolby Atmos para uma experiência de áudio mais imersiva.</li>
+      <li>Design: Design compacto e elegante com um sistema de resfriamento avançado para manter a temperatura interna controlada.</li>
+     </ul>
+     <p>O Xbox One X se destaca por sua capacidade de proporcionar uma qualidade visual impressionante em 4K, bem como pela capacidade de rodar jogos mais antigos com melhorias visuais.</p>
+    <p>Com uma combinação poderosa de hardware e recursos, o Xbox One X é uma opção ideal para os jogadores que buscam uma experiência de jogo de alta qualidade e imersiva.</p>
+   <h3>Conclusão</h3> 
+   <p>Ao avaliar as opções empolgantes que o universo dos videogames apresenta em 2023, tanto o Xbox One S quanto o Xbox One X emergem como escolhas excepcionais, cada um trazendo seu próprio conjunto de atributos impressionantes.</p>
+   <p>Enquanto o Xbox One S cativa com sua versatilidade como um centro de entretenimento completo, compatibilidade com jogos anteriores e aprimoramentos visuais como o HDR, o Xbox One X se destaca como uma potência gráfica, conferindo jogos em 4K e HDR de tirar o fôlego, elevando a experiência a patamares visuais inigualáveis.</p>
+   <p>Independentemente da escolha, os dois consoles abrem as portas para vastas bibliotecas de títulos incríveis, seja explorando as capacidades multifuncionais do Xbox One S ou mergulhando nas imagens deslumbrantes do Xbox One X. Esta decisão é uma oportunidade para explorar mundos virtuais, desafiar habilidades e criar memórias inesquecíveis.</p>
+   <p>Assim, convidamos você, caro leitor, a tomar parte nessa aventura extraordinária, seja ela pontuada pela versatilidade inigualável do Xbox One S ou pela grandiosidade visual do Xbox One X. O que quer que você escolha, saiba que está embarcando em uma jornada que transcende os limites da realidade e abre as portas para um universo de possibilidades interativas!</p>
+
+  
+  </article>
+
+     </main>   
+     <img src="xbox.jpg">  
+     <form action="meu site.html" method="post">
+      <p>
+        <label for="email">Digite seu e-mail para receber noticias:</label>
+        <input type="e-mail" placeholder="Digite seu e-mail" id="email"/>
+    </p>
+    <input type="submit" value="Enviar" />
+     </form>        
+
+              
+              <footer>Marcelly Huastein & Rafael de Paula- Projeto Desenvolve - Bom Despacho </footer>
+            </body>
+</html>

@@ -1,0 +1,200 @@
+body {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.6;
+    color: black;
+    text-align: center;
+    transform: background 0,5s linear, color 0,5s linear;
+    
+  }
+
+.container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+label{
+    border-radius: 40%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0,5s linear;
+}
+body.dark
+  {
+    background-color: black;
+    color: white;
+    
+  }
+input.checkbox{
+    visibility: hidden;
+}
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+ 
+img
+  {
+    width: 800px;
+    height: 400px;
+    background-size: cover;
+   
+}
+footer
+    {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+    }
+h2 {
+    padding: 5px;
+} 
+section img {
+    width: 1280px;
+    height: 450px;
+    background-image: url('game.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #030303;
+    padding: 0px 0;
+   
+}  
+main {
+    font-family:Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    text-align: justify;
+} 
+aside {
+    text-align: justify;
+}
+section {
+    text-align: justify;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.saiba-mais {
+    position: center;
+    top: 4500px;
+    left: 30%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+@media screen and (max-width: 768px) { 
+    .saiba-mais {
+     position: static;
+     width: 100%; 
+    }
+
+    p {
+        text-indent: 0;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+      }
+
+    .container2 {
+        max-width: 100%;
+        position: static;
+        display: center;
+     } 
+}
+@media print {
+    html {
+        font-family: 'Times New Roman', Times, serif;
+    }
+   
+    .saiba-mais {
+        position: static;
+        width: 100%; 
+       }
+       img {
+        max-width: 100%;
+        height: auto;
+      }
+   
+}
+
+
+.container2 {
+    margin-top: 2px;
+    padding: 5px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0);
+    width: 1270px;
+    text-align: center;
+    display: inline-block;
+
+}
+
+.form-container {
+    position: relative;
+}
+
+.form-login, .form-register {
+    display: flex;
+    flex-direction: column;
+}
+
+
+h2 {
+    margin-bottom: 2px;
+}
+
+input {
+    padding: 2px;
+    margin-bottom: 2px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 2px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+p {
+    margin-top: 2px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#registerForm {
+    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+ /* #verificationCode {
+    margin-top: 2px;
+    width: 10%; /* Ajuste a largura conforme necessário 
+    display: flex;
+}  
+*/
+
+#registerButton {
+    width: 6%; /* Ajuste a largura conforme necessário */
+} 
+
