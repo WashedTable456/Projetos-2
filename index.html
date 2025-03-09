@@ -4,6 +4,7 @@
         <title>Site Game Over</title>
         <link rel="stylesheet" href="style.css">
         <script src="script.js" defer></script>
+        <script src="app.js" defer></script>
 
         <!-- inicio do codigo de login -->
     <div class="container2">
@@ -24,9 +25,9 @@
                   <input type="text" id="registerName" placeholder="Nome" required>
                   <input type="email" id="registerEmail" placeholder="Email" required>
                   <input type="password" id="registerPassword" placeholder="Senha" required>
-                  <button type="button" id="sendCode">Cadastrar</button>
-                  <!--<input type="text" id="verificationCode" placeholder="Código de Verificação" required style="display: none;">
-                  <button type="submit" id="registerButton" style="display: none;">Cadastrar</button> -->
+                  <!--<button type="button" id="sendcode">Cadastrar</button>
+                  <input type="text" id="verificationCode" placeholder="Código de Verificação" required style="display: none;"> --->
+                  <button type="submit">Cadastrar</button> 
               </form>
               <p>Já tem uma conta? <a href="#" id="showLogin">Faça login</a></p>
           </div>
@@ -41,8 +42,8 @@
       const registerForm = document.getElementById('registerForm');
       const formLogin = document.querySelector('.form-login');
       const formRegister = document.querySelector('.form-register');
-      const sendCodeButton = document.getElementById('sendCode');
-      const verificationCodeInput = document.getElementById('verificationCode');
+     /* const sendCodeButton = document.getElementById('registerButton');
+      const verificationCodeInput = document.getElementById('verificationCode');*/
       const registerButton = document.getElementById('registerButton');
 
       showRegisterLink.addEventListener('click', (e) => {
@@ -68,13 +69,14 @@
           const name = document.getElementById('registerName').value;
           const email = document.getElementById('registerEmail').value;
           const password = document.getElementById('registerPassword').value;
-          const code = document.getElementById('verificationCode').value;
+          /*const code = document.getElementById('verificationCode').value; */
+          alert(`Cadastro realizado com sucesso: ${email}`);
 
-          if (code === '123456') {
+          /*if (code === '123456') {
               alert('Cadastro realizado com sucesso!');
-          } else {
+             else {
               alert('Código de verificação inválido.');
-          }
+          } */
       }); 
 
       loginForm.addEventListener('submit', (e) => {
